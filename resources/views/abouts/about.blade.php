@@ -4,13 +4,12 @@
 @endsection
 
 @section('contenu')
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <div class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header"><a href="{{ route('home') }}" class="navbar-brand"><img
-                            alt="uniRank World Universities Rankings & Reviews" src="{{ asset('i/uniRank-logo.png') }}"
-                            width="150" height="30" srcset="/i/uniRank-logo-hr.png 1.5x"></a>
-                    <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggle"
+        <a class="navbar-brand" href="{{ route('home') }}">
+            <img src="{{ asset('i/uniRank-logo.png') }}" width="150" height="30" alt="uniRank Logo">
+        </a>
+        <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggle"
                         data-target="#navbar-main" data-toggle="collapse" type="button"><span class="icon-bar"></span>
                         <span class="icon-bar"></span> <span class="icon-bar"></span></button>
                 </div>
@@ -83,15 +82,13 @@
                         </li>
                     </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#search" rel="nofollow"><img alt="Site Search" src="i/site-search.png" width="24"
-                                    height="24"></a></li>
-                    </ul>
-                </div>
-            </div>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Rechercher">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Rechercher</button>
+            </form>
         </div>
     </div>
-
+</nav>
 
     <ol class="breadcrumb small" itemscope>
         <li itemprop="itemListElement" itemscope> <a itemprop="item" href="{{ Route('home') }}"><span
